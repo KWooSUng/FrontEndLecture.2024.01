@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+#main{ 
+         width: 500px ; 
+         margin: auto;
+         padding: 10px;}
+
+#box{ border: 1px solid gray;
+    border-radius: 5px;
+ }
+
+   h1 { text-align: center;}
+
+   #pass{
+                width: 400px;
+                margin: auto; }
+
+   .tag {  border: 1px solid gray;
+         width: 378px ; 
+         margin: auto;
+         padding: 10px ; 
+         }
+
+    .tag:focus 
+    { outline: none;
+            border-color: red;
+            caret-color: red;}
+
+    .ad {
+          border-radius: 0px 0px 5px 5px;}
+
+    .bd {  
+        border-radius: 5px 5px 0px 0px;}
+
+ #btn{            
+            width: 400px;
+            margin: auto;
+        } 
+
+ #log{
+            background-color: rgb(255,0,56);
+            width: 400px;
+            padding: 15px;
+            font-size: 15px;
+            border: 0px;
+            border-radius: 5px;
+            font-weight: bold;
+            color: white;}
+
+#logsang { 
+    margin: auto;
+    font-size: 13px;
+    width: 400px;
+    margin-top: 10px;}
+
+.ddo {
+        display: flex;
+        flex-basis: 100%;
+        align-items: center;
+        color: rgba(0, 0, 0, 0.35);
+        font-size: 14px;
+        margin: 30px 35px;
+      }
+
+      .ddo::before,
+      .ddo::after {
+        content: "";
+        flex-grow: 1;
+        background: rgba(0, 0, 0, 0.35);
+        height: 1px;
+        font-size: 0px;
+        line-height: 0px;
+        margin: 0px 16px;
+      }
+
+.imgsns {  width: 400px;
+            margin: auto;
+            margin-bottom: 50px;
+}
+
+    #joinDiv{
+            width: 400px;
+            margin: auto;
+            margin-bottom: 50px;
+            margin-top: 30px;
+            font-size: 15px;
+        }
+
+ .joinTag{
+            text-decoration: none;
+            color: black;
+            margin-bottom: 100px; }
+
+ .banner { margin: auto;
+            background-size: 10px 150px;}
+
+.sns1, .sns2, .sns3, .sns4, .sns5, .sns6 { 
+    margin-right: 9px;
+}
+
+#chk:checked + .circle:after {opacity: 1;}
+
+.circle{
+  display: inline-block; /* 영역적용가능해짐 */
+  width: 20px; height: 20px;
+  border: 2px solid #333;
+  box-sizing: border-box;
+  border-radius: 10px; /* 모서리둥글게 처리 */
+  position: relative; top: 4px;
+  cursor: pointer; /* 마우스 올렸을때 손모양 처리 */
+}
+
+.circle:after{
+  content: '\2714'; /* 체크박스 특수문자 */
+  font-size: 24px; color: #333;
+  position: absolute; top: -14px; left: 0;
+
+  opacity: 0; /* 처음엔 안보이게 처리 */
+  transition: 0.2s; /* CSS변화에 시간차 처리 */
+}
+
+/* input이 체크되면 특수문자 보이게 처리 */
+#chk:checked + .circle:after{ opacity: 1; }
+
+/* 체크박스는 display:none;을 주면 데이터 처리가 안됨 */
+#chk{ position: absolute; left: -999em; }
+</style>
+
+<body>
+    <div id="main">
+        <div id="box" style="box-shadow: 0px 2px 5px 2px rgb(141, 141, 141) ">
+        <div id="top" >
+            <h1>
+                <img src="img/logo.PNG" >
+            </h1>
+        </div>
+    <div id="middle">
+        <div id="pass">
+            <input type="text" class="tag bd" placeholder="아이디 입력"/>
+            <br/>
+            <input type="password" class="tag ad" placeholder="비밀번호 8자~20자"/>
+        </div>
+            <br/>
+        <div id="btn">
+            
+            <button type="button" id="log">로그인</button>
+        </div>
+        <div id="logsang">  
+            <form action="#">
+                <label for="chk">
+                  <input type="checkbox" id="chk">
+                  <i class="circle"></i>
+                  <span class="text">로그인 상태 유지</span>
+                </label>
+              </form> 
+        </div>
+        <div class="ddo"> 또는 SNS 아이디로 로그인 </div>
+        <div class="imgsns"> 
+            <img src="img/sns-kakao.svg" class="sns1" />
+            <img src="img/sns-naver.svg" class="sns2"/>
+            <img src="img/sns-tid.svg"class="sns3" />
+            <img src="img/sns-apple.svg" class="sns4"/>
+            <img src="img/sns-payco.svg" class="sns5"/>
+            <img src="img/sns-facebook.svg" class="sns6"/>
+            <img src="img/sns-phone.svg" class="sns7"/>
+        </div>
+    </div>
+</div>
+       
+   
+        
+   
+        <div id="bottom">
+            <div id="joinDiv"> 
+                <a href="#" class="joinTag">아이디찾기 |</a> 
+                <a href="#" class="joinTag" >비밀번호찾기 |</a>
+                <a href="#" class="joinTag">비회원 주문조회 |</a>
+                <a href="#" class="joinTag">회원가입</a>
+            </div class="banner">
+                <img src="img/banner.png.png" style="width: 500px; height: 100px;"/>
+        </div>
+    </div>
+</body>
+</html>
